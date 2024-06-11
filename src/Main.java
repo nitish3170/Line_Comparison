@@ -24,11 +24,21 @@ public class Main {
         double len1=LineLength(coordinates[0],coordinates[1],coordinates[2],coordinates[3]);
         System.out.printf("Length of line : %.2f",len1);
     }
+    static void UC2_LineEquality(){
+        System.out.println("Enter coordinates of two lines for checking equality:");
+        int[] coordinates1= Inputline();
+        int[] coordinates2= Inputline();
+        double len1=LineLength(coordinates1[0],coordinates1[1],coordinates1[2],coordinates1[3]);
+        double len2=LineLength(coordinates2[0],coordinates2[1],coordinates2[2],coordinates2[3]);
+
+        if (len1==len2)System.out.println("Lines are equal");
+        else System.out.println("Lines are not equal");
+
+    }
     public static void main(String[] args) {
 //        Scanner sc =new Scanner (System.in);
         System.out.println("Welcome to Line Comparison Computation Program");
         UC1_LineLength();
-
-
+        UC2_LineEquality();
     }
 }
