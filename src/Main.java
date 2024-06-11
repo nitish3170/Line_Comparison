@@ -35,10 +35,21 @@ public class Main {
         else System.out.println("Lines are not equal");
 
     }
+    private static void UC3_LineComparison() {
+        System.out.println("Enter coordinates of two lines for Comparing :");
+        int[] coordinates1= Inputline();
+        int[] coordinates2= Inputline();
+        double len1=LineLength(coordinates1[0],coordinates1[1],coordinates1[2],coordinates1[3]);
+        double len2=LineLength(coordinates2[0],coordinates2[1],coordinates2[2],coordinates2[3]);
+        if (len1==len2)System.out.println("Lines are equal");
+        else if (len1>len2) System.out.println("Line 1 is greater");
+        else System.out.println("Line 2 is greater");
+    }
     public static void main(String[] args) {
 //        Scanner sc =new Scanner (System.in);
         System.out.println("Welcome to Line Comparison Computation Program");
         UC1_LineLength();
         UC2_LineEquality();
+        UC3_LineComparison();
     }
 }
